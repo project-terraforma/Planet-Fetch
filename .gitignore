@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# local data
+/metrics/
+/theme_class_summary_stats/
+/theme_column_summary_stats/
+result.json
+okrs.txt
+proj.txt
+read_pdfs.js
+read_pdfs.py
+scripts/
