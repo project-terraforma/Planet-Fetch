@@ -11,8 +11,6 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [generatedContext, setGeneratedContext] = useState<string | null>(null);
   const [step, setStep] = useState<'select' | 'processing' | 'result'>('select');
-  const [availableFormats, setAvailableFormats] = useState<string[]>([]);
-  const [selectedFormat, setSelectedFormat] = useState<string>('context');
 
   useEffect(() => {
     fetch('/api/releases')
@@ -26,26 +24,32 @@ export default function Home() {
       .catch(err => setError('Failed to load releases'));
   }, []);
 
-  const handleGenerate = async (format: string = 'context') => {
+  const handleGenerate = async () => {
     setLoading(true);
     setError(null);
-    if (step !== 'result') setStep('processing');
-    setSelectedFormat(format);
+    setStep('processing');
 
     try {
-      const response = await fetch(`/api/contexts?release=${selectedRelease}&format=${format}`);
+      const response = await fetch('/api/process', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ release: selectedRelease }),
+      });
+
       const result = await response.json();
 
       if (!result.success) {
         throw new Error(result.error);
       }
 
-      setGeneratedContext(result.content);
-      setAvailableFormats(result.availableFormats || []);
+      // The backend now executes the Python pipeline and returns the fully formatted text
+      setGeneratedContext(result.data);
       setStep('result');
     } catch (err: any) {
       setError(err.message || 'An unexpected error occurred');
-      if (step !== 'result') setStep('select');
+      setStep('select');
     } finally {
       setLoading(false);
     }
@@ -57,7 +61,7 @@ export default function Home() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${selectedRelease}_${selectedFormat}.txt`;
+    a.download = 'context.txt';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -85,7 +89,7 @@ export default function Home() {
           </h1>
           <p className="max-w-2xl mx-auto text-neutral-400 text-lg md:text-xl">
             Stop staring at static charts. Start a conversation with your data. <br />
-            Retrieve LLM-ready context files from raw Overture Maps metrics instantly.
+            Generate LLM-ready context files from raw Overture Maps metrics instantly.
           </p>
         </motion.div>
       </section>
@@ -102,7 +106,7 @@ export default function Home() {
             <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
             <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
             <div className="w-3 h-3 rounded-full bg-emerald-500/20 border border-emerald-500/50" />
-            <div className="ml-auto text-xs text-neutral-600 font-mono">context_retriever_v2.0</div>
+            <div className="ml-auto text-xs text-neutral-600 font-mono">context_generator_v1.0</div>
           </div>
 
           <div className="p-8 md:p-12">
@@ -142,12 +146,12 @@ export default function Home() {
                   )}
 
                   <button
-                    onClick={() => handleGenerate('context')}
+                    onClick={handleGenerate}
                     disabled={loading || !selectedRelease}
                     className="group w-full bg-white text-black font-medium py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-neutral-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileText className="w-5 h-5" />}
-                    <span>Retrieve Context File</span>
+                    <span>Generate Context File</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </motion.div>
@@ -165,8 +169,8 @@ export default function Home() {
                     <div className="w-16 h-16 border-4 border-neutral-800 border-t-emerald-500 rounded-full animate-spin" />
                   </div>
                   <div className="text-center space-y-2">
-                    <h3 className="text-xl font-medium text-white">Fetching Data...</h3>
-                    <p className="text-neutral-500">Retrieving context for {selectedRelease}</p>
+                    <h3 className="text-xl font-medium text-white">Ingesting Data...</h3>
+                    <p className="text-neutral-500">Parsing CSVs across {selectedRelease}</p>
                   </div>
                 </motion.div>
               )}
@@ -178,42 +182,18 @@ export default function Home() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="space-y-6 h-full"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-emerald-400">
                       <Check className="w-5 h-5" />
-                      <span className="font-medium">Context Retrieved ({selectedRelease})</span>
+                      <span className="font-medium">Context Generated Successfully</span>
                     </div>
-                    
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setStep('select')}
-                        className="text-sm text-neutral-500 hover:text-white transition-colors"
-                      >
-                        Reset
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => setStep('select')}
+                      className="text-sm text-neutral-500 hover:text-white transition-colors"
+                    >
+                      Process Another Release
+                    </button>
                   </div>
-
-                  {availableFormats.length > 0 && (
-                    <div className="bg-neutral-950/50 p-2 rounded-lg border border-neutral-800 flex flex-wrap gap-2">
-                      <span className="text-xs text-neutral-500 px-2 py-1 uppercase tracking-wider">Format:</span>
-                      <button
-                        onClick={() => handleGenerate('context')}
-                        className={`text-xs px-3 py-1 rounded-md transition-all ${selectedFormat === 'context' ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50' : 'hover:bg-neutral-800 text-neutral-400'}`}
-                      >
-                        Default (Tabular)
-                      </button>
-                      {availableFormats.map(f => (
-                        <button
-                          key={f}
-                          onClick={() => handleGenerate(f)}
-                          className={`text-xs px-3 py-1 rounded-md transition-all ${selectedFormat === f ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50' : 'hover:bg-neutral-800 text-neutral-400'}`}
-                        >
-                          {f.replace('v', 'V').replace('_', ' ')}
-                        </button>
-                      ))}
-                    </div>
-                  )}
 
                   <div className="relative group">
                     <pre className="w-full h-96 bg-neutral-950 border border-neutral-800 rounded-lg p-6 overflow-auto font-mono text-sm text-neutral-300 leading-relaxed shadow-inner">
@@ -224,13 +204,13 @@ export default function Home() {
                         onClick={handleDownload}
                         className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-3 py-1.5 rounded-md border border-emerald-500 transition-colors opacity-0 group-hover:opacity-100"
                       >
-                        Download
+                        Download context.txt
                       </button>
                       <button
                         onClick={() => navigator.clipboard.writeText(generatedContext)}
                         className="bg-neutral-800 hover:bg-neutral-700 text-white text-xs px-3 py-1.5 rounded-md border border-neutral-700 transition-colors opacity-0 group-hover:opacity-100"
                       >
-                        Copy
+                        Copy to Clipboard
                       </button>
                     </div>
                   </div>
@@ -242,7 +222,7 @@ export default function Home() {
                     <div>
                       <h4 className="text-sm font-medium text-white">Ready for LLM Ingestion</h4>
                       <p className="text-sm text-neutral-500 mt-1">
-                        This format ({selectedFormat === 'context' ? 'Recommended Tabular' : selectedFormat}) is optimized for {selectedFormat.includes('compressed') ? 'token efficiency' : 'accuracy'}.
+                        Copy the text above and paste it into ChatGPT, Claude, or any LLM to ask questions about this dataset.
                       </p>
                     </div>
                   </div>
