@@ -8,14 +8,26 @@ GLOBAL STATISTICS
   - Themes Count: 6
 
 DETAILED THEME BREAKDOWN
-  - Addresses: 446,766,672 records
-  - Base: 418,906,047 records
-  - Buildings: 2,625,549,693 records
-  - Divisions: 5,505,067 records
-  - Places: 61,681,819 records
-  - Transportation: 696,776,413 records
+  - ADDRESSES: 446,766,672 records
+    * Top Sources: br_ibge (89,899,299), NAD (78,599,358), OpenAddresses/AddressForAll/INEGI (30,278,896)
+    * Highlights: country_count (100.00%), address_levels_count (100.00%), number_count (99.32%)
+  - BASE: 418,906,047 records
+    * Top Sources: OpenStreetMap (295,543,873), ESA WorldCover (123,302,114), ETOPO/GLOBathy (60,060)
+    * Highlights: subtype_count (99.99%), class_count (70.55%), source_tags_count (70.34%)
+  - BUILDINGS: 2,625,549,693 records
+    * Top Sources: Google Open Buildings (988,943,874), Microsoft ML Buildings (733,533,309), OpenStreetMap (560,082,060)
+    * Highlights: is_underground_count (100.00%), has_parts_count (99.87%), height_count (7.33%)
+  - DIVISIONS: 5,505,067 records
+    * Top Sources: OpenStreetMap (5,469,675), geoBoundaries (28,347), Esri Community Maps,OpenStreetMap (5,973)
+    * Highlights: subtype_count (100.00%), country_count (99.99%), region_count (98.66%)
+  - PLACES: 61,681,819 records
+    * Top Sources: meta (53,765,036), Microsoft (5,156,084), Microsoft,meta (2,640,326)
+    * Highlights: names_count (100.00%), categories_count (100.00%), confidence_count (100.00%)
+  - TRANSPORTATION: 696,776,413 records
+    * Top Sources: OpenStreetMap (696,551,619), TomTom (224,794)
+    * Highlights: subtype_count (46.15%), connectors_count (46.15%), class_count (45.91%)
 
-TOP 50 COUNTRIES BY RECORD COUNT
+TOP COUNTRIES OVERALL
   - US: 11,884,377
   - BR: 5,029,839
   - IN: 3,892,038
@@ -23,8 +35,4 @@ TOP 50 COUNTRIES BY RECORD COUNT
   - GB: 2,233,739
 
 ================================================================================
-INSTRUCTIONS FOR LLM:
-You are an expert data analyst specializing in Overture Maps. The statistics above represent the GROUND TRUTH.
-1. Referral: Use these numbers for any 'how many' or 'top' questions.
-2. Strictness: If a theme or country is not listed, state it is unavailable in this summary.
-3. Accuracy: Do not hallucinate growth rates or future projections unless explicitly derived from this data.
+STRICT ANALYST MODE: Use only the figures above for verification.

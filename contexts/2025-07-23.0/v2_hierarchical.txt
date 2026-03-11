@@ -1,29 +1,26 @@
 Overture Maps Context [2025-07-23.0]
 └── Global Summary
     ├── Total Records: 4,198,576,839
-    └── Active Themes: 6
+    └── Themes: 6
 └── Theme Hierarchy
     ├── ADDRESSES (446,544,475)
-    │   └── address
+    │   ├── Types: address
+    │   ├── Top Source: br_ibge (89,899,299)
     ├── BASE (437,347,239)
-    │   └── bathymetry
-    │   └── land_use
-    │   └── land
-    │   └── infrastructure
-    │   └── water
-    │   └── land_cover
+    │   ├── Types: bathymetry, land_use, land, infrastructure, water, land_cover
+    │   ├── Top Source: OpenStreetMap (313,985,162)
     ├── BUILDINGS (2,537,908,432)
-    │   └── building
-    │   └── building_part
+    │   ├── Types: building, building_part
+    │   ├── Top Source: Google Open Buildings (924,298,936)
     ├── DIVISIONS (5,549,168)
-    │   └── division
-    │   └── division_area
-    │   └── division_boundary
+    │   ├── Types: division, division_area, division_boundary
+    │   ├── Top Source: OpenStreetMap (5,509,100)
     ├── PLACES (64,639,979)
-    │   └── place
+    │   ├── Types: place
+    │   ├── Top Source: meta (56,685,162)
     ├── TRANSPORTATION (706,587,546)
-    │   └── connector
-    │   └── segment
+    │   ├── Types: connector, segment
+    │   ├── Top Source: OpenStreetMap (706,047,196)
 └── Top Countries
     ├── US: 12,724,622
     ├── BR: 5,102,525

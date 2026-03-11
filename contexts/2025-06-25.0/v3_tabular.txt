@@ -1,22 +1,35 @@
 # Overture Maps Release 2025-06-25.0 Summary
 
 ## Core Metrics
-| Metric | Value |
-| :--- | :--- |
-| Total Records | 4,191,387,338 |
-| Number of Themes | 6 |
+**Total Records:** 4,191,387,338 | **Themes:** 6
 
-## Theme Breakdown
-| Theme | Record Count |
-| :--- | :---: |
-| addresses | 446,544,475 |
-| base | 433,775,781 |
-| buildings | 2,537,908,430 |
-| divisions | 5,519,182 |
-| places | 64,367,210 |
-| transportation | 703,272,260 |
+## Theme Details
+| Theme | Total Count | Top Classes | Top Subtypes |
+| :--- | :--- | :--- | :--- |
+| addresses | 446,544,475 |  |  |
+| base | 433,775,781 | tree, stream | power, shrub |
+| buildings | 2,537,908,430 | house, residential | residential, outbuilding |
+| divisions | 5,519,182 | hamlet, village | locality, neighborhood |
+| places | 64,367,210 |  |  |
+| transportation | 703,272,260 | residential, service | road, rail |
 
-## Top Country Distribution
+## Property Coverage highlights
+| Theme | Metric | Coverage |
+| :--- | :--- | :--- |
+| addresses | country_count | 100.00% |
+| addresses | address_levels_count | 100.00% |
+| base | subtype_count | 99.99% |
+| base | class_count | 71.56% |
+| buildings | is_underground_count | 100.00% |
+| buildings | has_parts_count | 99.87% |
+| divisions | subtype_count | 100.00% |
+| divisions | country_count | 99.99% |
+| places | names_count | 100.00% |
+| places | categories_count | 100.00% |
+| transportation | subtype_count | 46.12% |
+| transportation | connectors_count | 46.12% |
+
+## Top Countries
 | Rank | Country | Records |
 | :---: | :--- | :---: |
 | 1 | US | 12,593,796 |

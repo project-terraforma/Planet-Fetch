@@ -1,22 +1,40 @@
-# Context Format Benchmark - Overture Metrics
+# Overture Maps Context Accuracy Benchmark
 
-This benchmark evaluates four different context formats for their effectiveness in grounding LLM responses to Overture Maps Foundation metrics.
+This report evaluates the accuracy of 5 different context formats across 10 sample questions from `test_sample_questions.csv` for the **2025-01-22.0** release.
 
-## Performance Metrics
+## Evaluation Summary
 
-| Format | Accuracy | Readability | Hallucination Rate | Token Efficiency | Overall Score |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **V1: Refined Standard** | 8.5 | 9.0 | 8% | 7.5 | 8.25 |
-| **V2: Hierarchical** | 9.0 | 7.5 | 5% | 6.0 | 7.00 |
-| **V3: Tabular** | **9.5** | **9.5** | **2%** | 8.0 | **9.12** |
-| **V4: Compressed** | 6.5 | 4.0 | 15% | **9.5** | 6.00 |
+| Context Format | Description | Factuality Score | Token Efficiency | Recommended Use Case |
+| :--- | :--- | :---: | :---: | :--- |
+| **Default** | Full section-based format | **100%** | Low (~10KB) | Deep analysis, full details |
+| **V1 (Refined)** | Analytical summary (Bullet points) | **85%** | Medium (~4KB) | Quick insights, summaries |
+| **V2 (Tree)** | Hierarchical structure | **30%** | High (~2KB) | Visualizing theme relationships |
+| **V3 (Tabular)** | Data-heavy tables | **75%** | Medium (~5KB) | Comparing specific metrics |
+| **V4 (Compressed)**| Key-Value pairs | **15%** | Ultra High (<1KB) | Low-token API calls |
 
-## Analysis
-- **V3 (Tabular)** is the clear winner for accuracy and lookup precision. Markdown tables provide explicit structure that LLMs parse with high reliability.
-- **V1 (Refined Standard)** is highly readable and a good balance for general-purpose chat interfaces.
-- **V2 (Hierarchical)** helps with deep nesting (e.g., theme > type > country) but becomes unwieldy if the hierarchy is too deep or the list too long.
-- **V4 (Compressed)**, while token-efficient, leads to higher hallucination rates as the lack of whitespace and labels confuses the model's self-attention mechanism on large datasets.
+## Test Results (10 Samples)
 
-## Key Recommendations
-1. **Primary Format**: Adopt the **Tabular (V3)** format for all automated context generation where accuracy is critical.
-2. **Supplemental Instructions**: Combine tabular data with explicit grounding instructions (from `prompts/library.json`) to minimize speculation.
+| # | Question | Default | V1 | V2 | V3 | V4 |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| Q1 | Total address records | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Q3 | Top address sources/counts | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Q4 | Postcode coverage % | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q6 | Address Level 1 distribution | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Q24| Top place categories | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q31| Base theme subtypes | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q33| Building class counts | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q36| Building parts coverage % | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q48| Places primary category | ✅ | ✅ | ❌ | ✅ | ❌ |
+| Q56| Transportation top classes | ✅ | ✅ | ❌ | ✅ | ❌ |
+
+## Detailed Breakdown & Truth
+- **Q1 (Total Addresses)**: 402,469,977 (Found in ALL formats).
+- **Q3 (Top Dataset)**: br_ibge (89,899,299). Omitted in V2, V4. Partial in V3.
+- **Q4 (Postcode %)**: 73.94%. Found in Default, V1, V3.
+- **Q6 (L1 Distribution)**: SP: 17,434,203. Only in Default.
+- **Q56 (Transportation Classes)**: residential, service. Found in Default, V1, V3.
+
+## Observations
+- **V1 (Refined)** is surprisingly accurate for a summary because it includes "Highlights" (coverage and sources).
+- **V3 (Tabular)** excels at property coverage but misses the "Top Address Level" values which weren't converted to tables yet.
+- **Default** is mandatory if the user asks for secondary administrative levels (Level 1, Level 2) as these are omitted in summaries for token savings.
