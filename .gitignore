@@ -41,6 +41,8 @@ yarn-error.log*
 next-env.d.ts
 # local data
 /metrics/
+/flattened/
+python_pipeline/__pycache__/
 /theme_class_summary_stats/
 /theme_column_summary_stats/
 result.json

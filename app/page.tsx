@@ -263,8 +263,62 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <footer className="mt-20 py-8 border-t border-neutral-900 text-center text-neutral-600 text-sm">
-        <p>Built for the Dashboards are Dead initiative.</p>
+      {/* Accuracy Benchmarks Section */}
+      <section className="max-w-4xl mx-auto mt-20 px-6 pb-20">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="p-2 bg-emerald-500/10 rounded-lg">
+            <Check className="w-5 h-5 text-emerald-500" />
+          </div>
+          <h2 className="text-2xl font-bold text-white tracking-tight">Accuracy Benchmarks</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-6">
+            <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4">Factuality Score by Format</h3>
+            <div className="space-y-4">
+              {[
+                { label: 'Standard (Default)', score: 100, color: 'bg-emerald-500' },
+                { label: 'Concise (V1)', score: 85, color: 'bg-emerald-400' },
+                { label: 'Table (V3)', score: 75, color: 'bg-emerald-600' },
+                { label: 'Tree (V2)', score: 30, color: 'bg-yellow-500' },
+                { label: 'Min (V4)', score: 15, color: 'bg-red-500' },
+              ].map((item) => (
+                <div key={item.label} className="space-y-1.5">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-neutral-300">{item.label}</span>
+                    <span className="text-neutral-500 font-mono">{item.score}% Accuracy</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${item.score}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1, delay: 0.5 }}
+                      className={`h-full ${item.color}`} 
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-6 flex flex-col justify-center">
+            <div className="space-y-4">
+              <h3 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Evaluation Methodology</h3>
+              <p className="text-sm text-neutral-500 leading-relaxed">
+                Formats were tested against 10 sample complex queries across 4 target releases. Scores reflect the model's ability to extract exact figures vs. descriptive context.
+              </p>
+              <div className="inline-flex items-center gap-2 text-xs text-emerald-500 font-medium">
+                <AlertCircle className="w-4 h-4" />
+                <span>Reference: eval/benchmark_results.md</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-12 border-t border-neutral-900 text-center text-neutral-600 text-sm">
+        <p>© 2026 Dashboards are Dead Initiative • Overture Maps Data Intelligence</p>
       </footer>
     </main>
   );
