@@ -46,12 +46,12 @@ TOTAL THEMES
 6
 
 THEMES INCLUDED
-- divisions
 - buildings
 - transportation
-- addresses
-- base
+- divisions
 - places
+- base
+- addresses
 
 COMMON ATTRIBUTES ACROSS THEMES
 datasets
@@ -71,6 +71,8 @@ geometry_count: Number of geometries present
 bbox_count: Number of bounding boxes available
 sources_count: Number of data sources contributing to the records
 total_count: Total aggregated records for the grouping
+address_level_1: Administrative division level 1 (e.g. State, Province)
+address_level_2: Administrative division level 2 (e.g. County, City)
 
 IMPORTANT DATA FILTERING RULE
 Unless explicitly stated otherwise, all statistics exclude rows where change_type = removed.
@@ -96,50 +98,6 @@ KEY NOTES
 
 ---------------------------------------------------------------------------------------------------------------
 SECTION 3 — STATISTICS BY THEME
----------------------------------------------------------------------------------------------------------------
-
-### DIVISIONS
-
-Total Records: 5,447,026
-
-Types Included
-- division
-- division_area
-- division_boundary
-
-Top Datasets
-- OpenStreetMap: 5,420,745
-- geoBoundaries: 19,340
-- Esri Community Maps,OpenStreetMap: 6,939
-- OpenStreetMap,geoBoundaries: 2
-
-Property Coverage
-- subtype_count: 5,447,026 (100.00%)
-- names_count: 5,372,638 (98.63%)
-- country_count: 5,372,612 (98.63%)
-- region_count: 5,300,404 (97.31%)
-- class_count: 4,372,244 (80.27%)
-
-Top Class Values
-- hamlet: 1,670,811
-- village: 1,483,540
-- land: 1,089,821
-- town: 113,436
-- city: 14,636
-
-Top Subtype Values
-- locality: 3,845,472
-- neighborhood: 936,677
-- microhood: 276,444
-- macrohood: 190,780
-- county: 143,736
-
-Change Type Distribution
-- unchanged: 4,112,213
-- data_changed: 1,297,301
-- added: 37,512
-- removed: 9,944
-
 ---------------------------------------------------------------------------------------------------------------
 
 ### BUILDINGS
@@ -186,13 +144,57 @@ Change Type Distribution
 
 ---------------------------------------------------------------------------------------------------------------
 
+### DIVISIONS
+
+Total Records: 5,447,026
+
+Types Included
+- division_area
+- division_boundary
+- division
+
+Top Datasets
+- OpenStreetMap: 5,420,745
+- geoBoundaries: 19,340
+- Esri Community Maps,OpenStreetMap: 6,939
+- OpenStreetMap,geoBoundaries: 2
+
+Property Coverage
+- subtype_count: 5,447,026 (100.00%)
+- names_count: 5,372,638 (98.63%)
+- country_count: 5,372,612 (98.63%)
+- region_count: 5,300,404 (97.31%)
+- class_count: 4,372,244 (80.27%)
+
+Top Class Values
+- hamlet: 1,670,811
+- village: 1,483,540
+- land: 1,089,821
+- town: 113,436
+- city: 14,636
+
+Top Subtype Values
+- locality: 3,845,472
+- neighborhood: 936,677
+- microhood: 276,444
+- macrohood: 190,780
+- county: 143,736
+
+Change Type Distribution
+- unchanged: 4,112,213
+- data_changed: 1,297,301
+- added: 37,512
+- removed: 9,944
+
+---------------------------------------------------------------------------------------------------------------
+
 ### TRANSPORTATION
 
 Total Records: 686,267,959
 
 Types Included
-- segment
 - connector
+- segment
 
 Top Datasets
 - OpenStreetMap: 686,091,943
@@ -222,47 +224,6 @@ Change Type Distribution
 - data_changed: 3,189,683
 - added: 1,704,511
 - removed: 493,751
-
----------------------------------------------------------------------------------------------------------------
-
-### ADDRESSES
-
-Total Records: 402,469,977
-
-Types Included
-- address
-
-Top Datasets
-- br_ibge: 89,899,299
-- NAD: 75,738,719
-- OpenAddresses/AddressForAll/INEGI: 30,278,896
-- OpenAddresses/adresse.data.gouv.fr: 26,041,499
-- OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport: 19,576,027
-
-Property Coverage
-- country_count: 402,469,977 (100.00%)
-- address_levels_count: 402,469,977 (100.00%)
-- number_count: 399,490,454 (99.26%)
-- street_count: 395,314,554 (98.22%)
-- postcode_count: 297,571,015 (73.94%)
-
-Top Address Level 1 Values
-- SP: 17,434,203
-- MG: 9,962,739
-- TX: 9,799,798
-- BA: 7,705,315
-- RJ: 6,496,070
-
-Top Address Level 2 Values
-- São Paulo: 3,503,297
-- UNINCORPORATED: 1,816,632
-- Rio de Janeiro: 1,798,005
-- Bogotá Distrito Capital: 1,075,087
-- New York: 967,703
-
-Change Type Distribution
-- added: 402,469,977
-- removed: 401,448,519
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -311,10 +272,10 @@ Total Records: 386,993,823
 Types Included
 - land
 - bathymetry
-- land_cover
-- water
 - infrastructure
 - land_use
+- water
+- land_cover
 
 Top Datasets
 - OpenStreetMap: 263,631,649
@@ -347,6 +308,47 @@ Change Type Distribution
 - data_changed: 861,546
 - added: 214,546
 - removed: 191,953
+
+---------------------------------------------------------------------------------------------------------------
+
+### ADDRESSES
+
+Total Records: 402,469,977
+
+Types Included
+- address
+
+Top Datasets
+- br_ibge: 89,899,299
+- NAD: 75,738,719
+- OpenAddresses/AddressForAll/INEGI: 30,278,896
+- OpenAddresses/adresse.data.gouv.fr: 26,041,499
+- OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport: 19,576,027
+
+Property Coverage
+- country_count: 402,469,977 (100.00%)
+- address_levels_count: 402,469,977 (100.00%)
+- number_count: 399,490,454 (99.26%)
+- street_count: 395,314,554 (98.22%)
+- postcode_count: 297,571,015 (73.94%)
+
+Top Address Level 1 Values
+- SP: 17,434,203
+- MG: 9,962,739
+- TX: 9,799,798
+- BA: 7,705,315
+- RJ: 6,496,070
+
+Top Address Level 2 Values
+- São Paulo: 3,503,297
+- UNINCORPORATED: 1,816,632
+- Rio de Janeiro: 1,798,005
+- Bogotá Distrito Capital: 1,075,087
+- New York: 967,703
+
+Change Type Distribution
+- added: 402,469,977
+- removed: 401,448,519
 
 ---------------------------------------------------------------------------------------------------------------
 

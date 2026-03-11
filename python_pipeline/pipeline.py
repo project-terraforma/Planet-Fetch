@@ -13,16 +13,12 @@ def main():
     month = args.month
     
     # Define paths relative to the Next.js project root
-    script_dir = Path(__file__).parent
-    project_root = script_dir.parents[1]
+    script_dir = Path(__file__).resolve().parent
+    project_root = script_dir.parent
     
-    # Input data from the friend's Next.js project structure
-    # Based on verify_data.js, the metrics are at ../../metrics relative to scripts/
-    # The actual folder in the Next.js project may be at the root or outside.
-    # Let's align with the actual location of the user's data
-    user_home = Path.home()
-    metrics_base_path = user_home / "context_fetch" / "data" / "Metrics" / "metrics"
-    flattened_out_path = user_home / "context_fetch" / "data" / "flattened"
+    # Input data from the Next.js project structure
+    metrics_base_path = project_root / "metrics"
+    flattened_out_path = project_root / "flattened"
     
     contexts_dir = project_root / "contexts" / month
     contexts_dir.mkdir(parents=True, exist_ok=True)
