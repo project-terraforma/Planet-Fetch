@@ -46,11 +46,11 @@ TOTAL THEMES
 6
 
 THEMES INCLUDED
-- buildings
-- transportation
 - divisions
+- transportation
 - places
 - base
+- buildings
 - addresses
 
 COMMON ATTRIBUTES ACROSS THEMES
@@ -149,9 +149,9 @@ Change Type Distribution
 Total Records: 5,447,026
 
 Types Included
+- division
 - division_area
 - division_boundary
-- division
 
 Top Datasets
 - OpenStreetMap: 5,420,745
@@ -193,8 +193,8 @@ Change Type Distribution
 Total Records: 686,267,959
 
 Types Included
-- connector
 - segment
+- connector
 
 Top Datasets
 - OpenStreetMap: 686,091,943
@@ -224,6 +224,47 @@ Change Type Distribution
 - data_changed: 3,189,683
 - added: 1,704,511
 - removed: 493,751
+
+---------------------------------------------------------------------------------------------------------------
+
+### ADDRESSES
+
+Total Records: 402,469,977
+
+Types Included
+- address
+
+Top Datasets
+- br_ibge: 89,899,299
+- NAD: 75,738,719
+- OpenAddresses/AddressForAll/INEGI: 30,278,896
+- OpenAddresses/adresse.data.gouv.fr: 26,041,499
+- OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport: 19,576,027
+
+Property Coverage
+- country_count: 402,469,977 (100.00%)
+- address_levels_count: 402,469,977 (100.00%)
+- number_count: 399,490,454 (99.26%)
+- street_count: 395,314,554 (98.22%)
+- postcode_count: 297,571,015 (73.94%)
+
+Top Address Level 1 Values
+- SP: 17,434,203
+- MG: 9,962,739
+- TX: 9,799,798
+- BA: 7,705,315
+- RJ: 6,496,070
+
+Top Address Level 2 Values
+- São Paulo: 3,503,297
+- UNINCORPORATED: 1,816,632
+- Rio de Janeiro: 1,798,005
+- Bogotá Distrito Capital: 1,075,087
+- New York: 967,703
+
+Change Type Distribution
+- added: 402,469,977
+- removed: 401,448,519
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -271,11 +312,11 @@ Total Records: 386,993,823
 
 Types Included
 - land
+- land_cover
 - bathymetry
+- water
 - infrastructure
 - land_use
-- water
-- land_cover
 
 Top Datasets
 - OpenStreetMap: 263,631,649
@@ -308,47 +349,6 @@ Change Type Distribution
 - data_changed: 861,546
 - added: 214,546
 - removed: 191,953
-
----------------------------------------------------------------------------------------------------------------
-
-### ADDRESSES
-
-Total Records: 402,469,977
-
-Types Included
-- address
-
-Top Datasets
-- br_ibge: 89,899,299
-- NAD: 75,738,719
-- OpenAddresses/AddressForAll/INEGI: 30,278,896
-- OpenAddresses/adresse.data.gouv.fr: 26,041,499
-- OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport: 19,576,027
-
-Property Coverage
-- country_count: 402,469,977 (100.00%)
-- address_levels_count: 402,469,977 (100.00%)
-- number_count: 399,490,454 (99.26%)
-- street_count: 395,314,554 (98.22%)
-- postcode_count: 297,571,015 (73.94%)
-
-Top Address Level 1 Values
-- SP: 17,434,203
-- MG: 9,962,739
-- TX: 9,799,798
-- BA: 7,705,315
-- RJ: 6,496,070
-
-Top Address Level 2 Values
-- São Paulo: 3,503,297
-- UNINCORPORATED: 1,816,632
-- Rio de Janeiro: 1,798,005
-- Bogotá Distrito Capital: 1,075,087
-- New York: 967,703
-
-Change Type Distribution
-- added: 402,469,977
-- removed: 401,448,519
 
 ---------------------------------------------------------------------------------------------------------------
 
