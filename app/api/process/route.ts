@@ -23,7 +23,7 @@ export async function POST(req: Request) {
         console.log(`Executing pipeline for release: ${release}`);
 
         // Run the Python pipeline via child_process
-        const command = `${pythonExecutable} ${pipelineScript} --month ${release}`;
+        const command = `"${pythonExecutable}" "${pipelineScript}" --month ${release}`;
         
         try {
             const { stdout, stderr } = await execPromise(command, { maxBuffer: 1024 * 1024 * 10 }); // 10MB buffer just in case
