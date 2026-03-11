@@ -8,7 +8,7 @@ const execPromise = util.promisify(exec);
 
 export async function POST(req: Request) {
     try {
-        const { release } = await req.json();
+        const { release, format = 'default' } = await req.json();
 
         if (!release) {
             return NextResponse.json({ error: 'Release date is required' }, { status: 400 });
@@ -16,38 +16,32 @@ export async function POST(req: Request) {
 
         // Define paths
         const projectRoot = process.cwd();
-        const pythonExecutable = path.join(projectRoot, 'python_pipeline', 'venv', 'bin', 'python');
-        const pipelineScript = path.join(projectRoot, 'python_pipeline', 'pipeline.py');
-        const contextFilePath = path.join(projectRoot, 'contexts', release, 'context.txt');
-
-        console.log(`Executing pipeline for release: ${release}`);
-
-        // Run the Python pipeline via child_process
-        const command = `"${pythonExecutable}" "${pipelineScript}" --month ${release}`;
         
-        try {
-            const { stdout, stderr } = await execPromise(command, { maxBuffer: 1024 * 1024 * 10 }); // 10MB buffer just in case
-            console.log('Pipeline Output:', stdout);
-            if (stderr) console.error('Pipeline Stderr:', stderr);
-        } catch (execError: any) {
-            console.error('Pipeline execution failed:', execError);
-            return NextResponse.json({ error: `Pipeline execution failed: ${execError.message}` }, { status: 500 });
-        }
+        // Map format to filename
+        let filename = 'context.txt';
+        if (format === 'v1') filename = 'v1_refined.txt';
+        else if (format === 'v2') filename = 'v2_hierarchical.txt';
+        else if (format === 'v3') filename = 'v3_tabular.txt';
+        else if (format === 'v4') filename = 'v4_compressed.txt';
 
-        // Check if the context file was successfully generated
+        const contextFilePath = path.join(projectRoot, 'contexts', release, filename);
+
+        console.log(`Retrieving context for release: ${release}, format: ${format}`);
+
+        // Check if the context file exists
         if (!fs.existsSync(contextFilePath)) {
-            return NextResponse.json({ error: `Context file was not generated at ${contextFilePath}` }, { status: 500 });
+            return NextResponse.json({ 
+                error: `Context file (${format}) not found for release ${release}. Make sure it was pre-generated.` 
+            }, { status: 404 });
         }
 
         // Read the result and return it to the frontend
         const generatedContext = fs.readFileSync(contextFilePath, 'utf-8');
 
-        // Note: The frontend page.tsx expects { success: true, data: ... } 
-        // We will send the raw generated text as `data` and update page.tsx to handle it directly.
         return NextResponse.json({ success: true, data: generatedContext });
 
     } catch (error) {
-        console.error('Error processing metrics:', error);
-        return NextResponse.json({ error: 'Failed to process metrics' }, { status: 500 });
+        console.error('Error retrieving context:', error);
+        return NextResponse.json({ error: 'Failed to retrieve context' }, { status: 500 });
     }
 }

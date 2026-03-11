@@ -7,6 +7,7 @@ import { Terminal, Database, FileText, ArrowRight, Check, AlertCircle, Loader2 }
 export default function Home() {
   const [releases, setReleases] = useState<string[]>([]);
   const [selectedRelease, setSelectedRelease] = useState<string>('');
+  const [selectedFormat, setSelectedFormat] = useState<string>('default');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [generatedContext, setGeneratedContext] = useState<string | null>(null);
@@ -35,7 +36,10 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ release: selectedRelease }),
+        body: JSON.stringify({ 
+          release: selectedRelease,
+          format: selectedFormat 
+        }),
       });
 
       const result = await response.json();
@@ -138,6 +142,32 @@ export default function Home() {
                     </div>
                   </div>
 
+                  <div>
+                    <label className="block text-sm font-medium text-neutral-400 mb-2 uppercase tracking-wide">Select Context Format</label>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                      {[
+                        { id: 'default', label: 'Standard' },
+                        { id: 'v1', label: 'Concise (V1)' },
+                        { id: 'v2', label: 'Tree (V2)' },
+                        { id: 'v3', label: 'Table (V3)' },
+                        { id: 'v4', label: 'Min (V4)' }
+                      ].map((f) => (
+                        <button
+                          key={f.id}
+                          type="button"
+                          onClick={() => setSelectedFormat(f.id)}
+                          className={`py-3 px-2 rounded-lg border text-sm font-medium transition-all ${
+                            selectedFormat === f.id
+                              ? 'bg-emerald-500/20 border-emerald-500 text-emerald-400'
+                              : 'bg-neutral-950 border-neutral-800 text-neutral-500 hover:border-neutral-700'
+                          }`}
+                        >
+                          {f.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   {error && (
                     <div className="flex items-center gap-2 text-red-400 bg-red-500/10 p-4 rounded-lg border border-red-500/20">
                       <AlertCircle className="w-5 h-5" />
@@ -151,7 +181,7 @@ export default function Home() {
                     className="group w-full bg-white text-black font-medium py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-neutral-200 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <FileText className="w-5 h-5" />}
-                    <span>Generate Context File</span>
+                    <span>Retrieve Context File</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </motion.div>
@@ -169,8 +199,8 @@ export default function Home() {
                     <div className="w-16 h-16 border-4 border-neutral-800 border-t-emerald-500 rounded-full animate-spin" />
                   </div>
                   <div className="text-center space-y-2">
-                    <h3 className="text-xl font-medium text-white">Ingesting Data...</h3>
-                    <p className="text-neutral-500">Parsing CSVs across {selectedRelease}</p>
+                    <h3 className="text-xl font-medium text-white">Retrieving Data...</h3>
+                    <p className="text-neutral-500">Fetching {selectedFormat} format for {selectedRelease}</p>
                   </div>
                 </motion.div>
               )}
@@ -185,7 +215,7 @@ export default function Home() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-emerald-400">
                       <Check className="w-5 h-5" />
-                      <span className="font-medium">Context Generated Successfully</span>
+                      <span className="font-medium">Context Retrieved Successfully</span>
                     </div>
                     <button
                       onClick={() => setStep('select')}
