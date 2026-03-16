@@ -1,0 +1,954 @@
+Release 2025-01-22.0,,,,,,
+User Query #,User Queries,Standard,Concise (V1),Tree (V2),Table (V3),Min (V4)
+1,What is the total number of address records?,"The **total number of address records** in the dataset is **402,469,977**.
+
+This value comes from the **Addresses theme**, which lists:
+
+* **Total Records:** **402,469,977**
+* **Types Included:** address
+
+So, according to the dataset statistics, there are **402,469,977 address records** currently aggregated in the **Addresses** theme.","The total number of address records is **402,469,977**.","The total number of address records in the Overture Maps Metrics Dataset is **402,469,977**.","The total number of address records is **402,469,977**.","The **total number of address records** in the dataset is **402,469,977**.
+
+This value comes directly from the **Addresses theme**, which lists:
+
+* **Total Records:** **402,469,977**
+* **Type Included:** address
+
+So, the dataset currently contains **402,469,977 address records**."
+3,"Which datasets or sources contribute the most address records, and what are their counts?","The **top datasets contributing the most address records** in the **Addresses** theme are:
+
+1. **br_ibge** — **89,899,299** records
+2. **NAD** — **75,738,719** records
+3. **OpenAddresses/AddressForAll/INEGI** — **30,278,896** records
+4. **OpenAddresses/adresse.data.gouv.fr** — **26,041,499** records
+5. **OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport** — **19,576,027** records
+
+These counts come from the **Top Datasets** section of the **Addresses** theme in the dataset.","The top sources contributing address records are:
+
+* **br_ibge**: 89,899,299 records
+* **NAD**: 75,738,719 records
+* **OpenAddresses / AddressForAll / INEGI**: 30,278,896 records","The top datasets contributing address records and their counts are:
+
+* **br_ibge**: 89,899,299
+* **NAD**: 75,738,719
+* **OpenAddresses/AddressForAll/INEGI**: 30,278,896
+* **OpenAddresses/adresse.data.gouv.fr**: 26,041,499
+* **OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport**: 19,576,027","Information on the **top datasets or sources contributing address records** is currently unavailable in this context file. The dataset lists total counts and coverage, but does not provide per-dataset breakdowns for addresses.","The **datasets contributing the most address records** in the **Addresses** theme are:
+
+1. **br_ibge** — **89,899,299** records
+2. **NAD** — **75,738,719** records
+3. **OpenAddresses/AddressForAll/INEGI** — **30,278,896** records
+4. **OpenAddresses/adresse.data.gouv.fr** — **26,041,499** records
+5. **OpenAddresses/Japanese Ministry of Land, Infrastructure and Transport** — **19,576,027** records
+
+These are the **top datasets by record count** contributing to the **402,469,977 total address records** in the dataset."
+4,What percentage of address records include postcode/ZIP values?,"In the **Addresses** theme:
+
+* **postcode_count:** **297,571,015**
+* **total address records:** **402,469,977**
+
+This means **73.94%** of address records include **postcode/ZIP values**.
+
+So, **73.94% of all address records contain postcode information** according to the dataset’s property coverage statistics.",Information is currently unavailable — the context file does not provide coverage for postcode or ZIP values in the addresses theme.,"Out of the total address records, **73.94%** include postcode or ZIP information.",**73.94%** of address records include postcode/ZIP values.,"**73.94%** of address records include **postcode/ZIP values**.
+
+From the **Addresses** theme property coverage:
+
+* **Total address records:** 402,469,977
+* **postcode_count:** 297,571,015
+
+This corresponds to **73.94%** of all address records having a postcode or ZIP code."
+6,What is the distribution (counts) of `address_level_1` (state/province) values?,"The dataset provides the **top `address_level_1` (state/province) values** in the **Addresses** theme. The counts are:
+
+* **SP** — **17,434,203**
+* **MG** — **9,962,739**
+* **TX** — **9,799,798**
+* **BA** — **7,705,315**
+* **RJ** — **6,496,070**
+
+These values represent the **most common `address_level_1` entries** and their corresponding **record counts** in the dataset.
+
+If you need the **complete distribution across all states/provinces**, that **information is currently unavailable** in this context file.","Information is currently unavailable — the context file provides that `address_levels_count` coverage is 100.00%, but it does not include the specific distribution or counts of `address_level_1` values.","The top `address_level_1` values and their counts are:
+
+* **SP**: 17,434,203
+* **MG**: 9,962,739
+* **TX**: 9,799,798
+* **BA**: 7,705,315
+* **RJ**: 6,496,070","Information on the **distribution of `address_level_1` (state/province) values** is currently unavailable in this context file. The metrics dataset provides coverage percentages, but not the counts per individual state or province.","The **distribution of `address_level_1` (state/province) values** provided in the dataset includes the following **top values and counts**:
+
+* **SP** — **17,434,203**
+* **MG** — **9,962,739**
+* **TX** — **9,799,798**
+* **BA** — **7,705,315**
+* **RJ** — **6,496,070**
+
+These represent the **most common `address_level_1` values** in the **Addresses theme** of the dataset.
+
+If you need the full distribution beyond these values, **information is currently unavailable** in the provided metrics dataset."
+10,Are there sources where `address_level_2` or `address_level_3` are missing for more than 50% of rows?,"Based on the information in this context file, **information is currently unavailable**.
+
+The dataset summary provides:
+
+* **Top `address_level_2` values** (e.g., São Paulo — 3,503,297; UNINCORPORATED — 1,816,632; Rio de Janeiro — 1,798,005; Bogotá Distrito Capital — 1,075,087; New York — 967,703).
+* **Property coverage metrics** for attributes such as country, address_levels, number, street, and postcode.
+
+However, it **does not provide statistics about missing rates for `address_level_2` or `address_level_3` by source**, nor does it list **dataset-level completeness percentages** for those fields. Therefore, we cannot determine whether any source has **more than 50% missing values** for those attributes from the available data.",Information is currently unavailable — the context file does not provide per-source coverage for `address_level_2` or `address_level_3`. It only reports overall address-level coverage as 100.00%.,"Information about sources with more than 50% missing `address_level_2` or `address_level_3` is **currently unavailable** in the provided dataset. The context only provides counts for top `address_level_2` values, not missing value percentages by source.",Information on missing `address_level_2` or `address_level_3` values by source is currently unavailable in this context file. The dataset provides overall coverage percentages but does not break down missing levels by individual sources.,"**Information is currently unavailable.**
+
+The provided Metrics dataset does **not include statistics about missing values for `address_level_2` or `address_level_3` by source or dataset**. The context only provides:
+
+* Top values for **`address_level_2`**
+* Overall **address level coverage counts** (`address_levels_count`)
+* **Top datasets** by record count
+
+Because there are **no metrics showing missing rates per source for `address_level_2` or `address_level_3`**, it is not possible to determine whether any sources are missing these fields for **more than 50% of rows** based on the available information."
+12,"Are there spatial outliers (e.g., addresses with `total_geometry_area_km2` or `average_geometry_area_km2` far above the 99th percentile)?","**Information is currently unavailable.**
+
+The context file does **not include any statistics** related to:
+
+* `total_geometry_area_km2`
+* `average_geometry_area_km2`
+* percentile distributions (such as the **99th percentile**)
+* spatial outlier analysis for address geometries
+
+The provided metrics dataset only includes **aggregate counts and coverage statistics** (e.g., total records, property coverage, top datasets, and change type distribution). Therefore, it does **not provide data needed to identify spatial outliers** based on geometry area.",Information is currently unavailable — the context file does not provide statistics on geometry area or spatial outliers for addresses.,Information on spatial outliers such as addresses with `total_geometry_area_km2` or `average_geometry_area_km2` above the 99th percentile is **currently unavailable** in the provided dataset. The metrics summary does not include percentile-based geometry area statistics.,"Information on spatial outliers, such as addresses with total_geometry_area_km2 or average_geometry_area_km2 exceeding the 99th percentile, is currently unavailable in this context file. The metrics dataset provides aggregated counts and coverage, but does not include detailed area statistics or outlier detection.","**Information is currently unavailable.**
+
+The provided Metrics dataset **does not include statistics for**:
+
+* `total_geometry_area_km2`
+* `average_geometry_area_km2`
+* percentile distributions (such as the **99th percentile**)
+* spatial outlier analysis
+
+Because these metrics are **not present in the context file**, it is not possible to determine whether **spatial outliers exist for address geometries**."
+13,Which sources or versions show the highest counts of `change_type` marked as 'removed' or 'modified'?,"The context file provides **change type distributions at the theme level only**, not **by source or version**. Therefore, **which specific sources or versions have the highest counts of `removed` or `modified` records is information currently unavailable**.
+
+However, the dataset does report **theme-level counts** for these change types:
+
+### Records Marked as **Removed**
+
+* **Buildings:** 4,279,507
+* **Transportation:** 493,751
+* **Base:** 191,953
+* **Addresses:** 401,448,519
+* **Divisions:** 9,944
+
+### Records Marked as **Modified (`data_changed`)**
+
+* **Buildings:** 10,555,253
+* **Transportation:** 3,189,683
+* **Divisions:** 1,297,301
+* **Base:** 861,546
+
+The **Places** theme shows **55,527,168 unchanged records** and does **not report modified or removed records**.
+
+Because the dataset summary does **not break these change types down by source dataset or version**, identifying which **sources or versions contribute the most removed or modified records is not available in this context file**.","Information is currently unavailable — the context file does not provide a breakdown of `change_type` counts by source or version. It only notes that, unless stated otherwise, removed rows are excluded except in the Change Type Distribution section, which does not include per-source counts.","Based on the available data:
+
+* **Addresses** have the highest `removed` count with **401,448,519** records.
+* **Buildings** have **4,279,507** records marked as `removed` and **10,555,253** marked as `data_changed`.
+* **Divisions** show **9,944** removed and **1,297,301** `data_changed`.
+* **Transportation** has **493,751** removed and **3,189,683** `data_changed`.
+* **Base** has **191,953** removed and **861,546** `data_changed`.
+* **Places** do not report any removed or modified records; all are `unchanged`.
+
+No further breakdown by **source or version** is provided in the context, so per-source or per-version counts for `removed` or `modified` are **currently unavailable**.","Information on **per-source or per-version counts of `change_type` marked as 'removed' or 'modified'** is currently unavailable in this context file. The dataset notes that removed rows are tracked in the Change Type Distribution, but specific counts by source or version are not provided.","Based on the provided Metrics dataset, **sources or versions with the highest counts of `change_type` marked as ""removed"" or ""modified"" cannot be determined.**
+
+The dataset **does include overall change type distributions by theme**, but it **does not break these counts down by source or version**.
+
+### Available Change Type Counts (Theme-Level)
+
+**Buildings**
+
+* **data_changed (modified):** 10,555,253
+* **removed:** 4,279,507
+
+**Transportation**
+
+* **data_changed (modified):** 3,189,683
+* **removed:** 493,751
+
+**Divisions**
+
+* **data_changed (modified):** 1,297,301
+* **removed:** 9,944
+
+**Base**
+
+* **data_changed (modified):** 861,546
+* **removed:** 191,953
+
+**Addresses**
+
+* **removed:** 401,448,519
+* *(No “data_changed” category shown)*
+
+**Places**
+
+* Only **unchanged: 55,527,168**
+
+### Conclusion
+
+While we know the **total counts of removed and modified records per theme**, **information is currently unavailable** regarding **which specific sources or dataset versions contribute the highest counts of these change types**."
+16,Which source has the highest `geometry_count` summed across all address classes?,"**Information is currently unavailable.**
+
+The context file does **not provide `geometry_count` values broken down by source** for the **Addresses** theme. It only lists:
+
+* **Total address records:** 402,469,977
+* **Top datasets contributing address records** (e.g., br_ibge — 89,899,299; NAD — 75,738,719; OpenAddresses/AddressForAll/INEGI — 30,278,896; etc.)
+* **Property coverage statistics** (country, address_levels, number, street, postcode)
+* **Change type distribution**
+
+Since **`geometry_count` aggregated by source across address classes is not included**, it is **not possible to determine which source has the highest geometry_count** from the available data.",Information is currently unavailable — the context file provides total records per source for addresses but does not report `geometry_count` summed by source.,"Information on `geometry_count` broken down by source for addresses is **currently unavailable** in the provided dataset. The context only gives total record counts by dataset, not geometry counts.","Information on **geometry counts by source across all address classes** is currently unavailable in this context file. The metrics dataset provides total geometry counts per theme (addresses: 402,469,977 total records), but not broken down by source.","**Information is currently unavailable.**
+
+The provided Metrics dataset **does not include `geometry_count` broken down by source for the Addresses theme**. While the dataset lists:
+
+* **Top datasets contributing address records** (e.g., *br_ibge* with **89,899,299** records, *NAD* with **75,738,719**, etc.)
+* Overall **total address records: 402,469,977**
+
+it **does not provide `geometry_count` aggregated by source or dataset**.
+
+Therefore, it is **not possible to determine which source has the highest `geometry_count` summed across all address classes** using the information available in this context file."
+18,Which `postal_city` values show an increase in address counts between consecutive releases?,"**Information is currently unavailable.**
+
+The context file does **not include statistics for `postal_city` values**, nor does it provide **comparisons between consecutive data releases**. The metrics available for the **Addresses** theme only include:
+
+* Total records (**402,469,977**)
+* Top datasets contributing address records
+* Property coverage (e.g., postcode coverage **73.94%**, street coverage **98.22%**)
+* Top `address_level_1` and `address_level_2` values
+* Change type distribution
+
+Because the dataset summary **does not track address counts by `postal_city` or provide release-to-release comparisons**, it is **not possible to determine which `postal_city` values increased between consecutive releases** from the available information.","Information is currently unavailable — the context file does not provide historical or time-series data by `postal_city`, so changes between releases cannot be determined.","Information on `postal_city` values showing increases between consecutive releases is **currently unavailable** in the provided dataset. The context only provides total counts for top `address_level_2` (city) values, without time-based or release-differenced statistics.",Information on **`postal_city` values showing increases in address counts between consecutive releases** is currently unavailable in this context file. The metrics dataset provides aggregated counts but does not include temporal or release-to-release change data at the city level.,"**Information is currently unavailable.**
+
+The provided Metrics dataset **does not include statistics for `postal_city` values** or **comparisons of address counts between consecutive releases**.
+
+The dataset only provides:
+
+* Total **address records:** **402,469,977**
+* **Top datasets** contributing address records
+* **Property coverage statistics**
+* **Top `address_level_1` and `address_level_2` values**
+* **Change type distribution**
+
+Because **`postal_city` metrics and release-to-release comparisons are not present**, it is **not possible to determine which `postal_city` values show an increase in address counts between consecutive releases** based on the available information."
+20,Top 5 `address_level_2` regions by total `id_count`?,"The context file provides the **top `address_level_2` regions** in the **Addresses** theme, which correspond to the highest **`id_count` totals**. The **Top 5 `address_level_2` regions by `id_count`** are:
+
+1. **São Paulo** — **3,503,297**
+2. **UNINCORPORATED** — **1,816,632**
+3. **Rio de Janeiro** — **1,798,005**
+4. **Bogotá Distrito Capital** — **1,075,087**
+5. **New York** — **967,703**
+
+These values represent the **largest counts of unique address feature IDs (`id_count`) aggregated at the `address_level_2` level** in the dataset.",Information is currently unavailable — the context file does not provide `id_count` broken down by `address_level_2` regions.,"The top 5 `address_level_2` regions by total `id_count` are:
+
+* **São Paulo**: 3,503,297
+* **UNINCORPORATED**: 1,816,632
+* **Rio de Janeiro**: 1,798,005
+* **Bogotá Distrito Capital**: 1,075,087
+* **New York**: 967,703","Information on the **top `address_level_2` regions by total `id_count`** is currently unavailable in this context file. The dataset provides overall counts and coverage for addresses, but does not list counts broken down by administrative level 2 regions.","The **top 5 `address_level_2` regions by total `id_count`** in the dataset are:
+
+1. **São Paulo** — **3,503,297**
+2. **UNINCORPORATED** — **1,816,632**
+3. **Rio de Janeiro** — **1,798,005**
+4. **Bogotá Distrito Capital** — **1,075,087**
+5. **New York** — **967,703**
+
+These represent the **highest counts of address records (unique IDs) at the `address_level_2` administrative level** in the Addresses theme."
+23,Which land cover categories have the largest `total_geometry_area_km2` in the latest release?,"**Information is currently unavailable.**
+
+The context file for the **BASE theme** (which includes land, land_use, and land_cover types) provides:
+
+* **Total record counts**
+* **Property coverage** (subtype, class, source tags, cartography, names)
+* **Top class and subtype values by count**
+* **Change type distribution**
+
+However, it **does not include any statistics for `total_geometry_area_km2` or aggregated land area by class/subtype**. Therefore, we **cannot determine which land cover categories occupy the largest area** from the available data.",Information is currently unavailable — the context file for the **base** theme provides total records and coverage metrics but does not include `total_geometry_area_km2` or land cover category area statistics.,"Information on `total_geometry_area_km2` by land cover category is **currently unavailable** in the provided dataset. The metrics summary for the **BASE** theme only provides counts of records, classes, and subtypes, not aggregated geometry areas.",Information on **land cover categories and their `total_geometry_area_km2`** is currently unavailable in this context file. The metrics dataset provides aggregated counts and theme-level statistics but does not include area measurements by category.,"**Information is currently unavailable.**
+
+The provided Metrics dataset **does not include `total_geometry_area_km2` or any area-based statistics** for the **Base** theme (land, land_use, land_cover, etc.) or other themes. Only counts of records, property coverage, and class/subtype counts are provided.
+
+Therefore, it is **not possible to determine which land cover categories have the largest total geometry area** using the available context."
+26,Which `change_type` is most common for land use features?,"In the **BASE theme** (which includes **land, land_use, land_cover, bathymetry, infrastructure, water**), the **change type distribution** is:
+
+* **unchanged:** 385,917,731
+* **data_changed:** 861,546
+* **added:** 214,546
+* **removed:** 191,953
+
+Since **land use features are included in the BASE theme**, the **most common `change_type`** for them is:
+
+**`unchanged`**, with **385,917,731 records**.",Information is currently unavailable — the context file does not provide `change_type` distributions broken down by specific base subtypes such as land use.,"For land use features in the **BASE** theme, the most common `change_type` is **unchanged**, with **385,917,731** records.","Information on the **most common `change_type` for land use features** is currently unavailable in this context file. The dataset notes that change types are tracked, but it does not provide breakdowns by theme or feature type for land use.","For **land use features** in the **Base** theme, the most common `change_type` is **unchanged**.
+
+From the **Base theme change type distribution**:
+
+* **unchanged:** 385,917,731
+* **data_changed:** 861,546
+* **added:** 214,546
+* **removed:** 191,953
+
+This shows that the vast majority of Base records, including land use features, remain **unchanged** in the latest release."
+28,What is the distribution of `average_geometry_length_km` for linear features such as rivers and roads?,"**Information is currently unavailable.**
+
+The context file provides **counts, property coverage, and top class/subtype values** for the **Transportation** and **BASE** themes, which include linear features like **roads** and **rivers**, but it **does not include any statistics on `average_geometry_length_km` or length distributions**.
+
+Therefore, we cannot determine the distribution of lengths for rivers, roads, or other linear features from the available dataset summary.",Information is currently unavailable — the context file does not provide statistics on `average_geometry_length_km` for linear features like rivers or roads.,"Information on the distribution of `average_geometry_length_km` for linear features like rivers or roads is **currently unavailable** in the provided dataset. The context only provides total counts and top class/subtype values for **BASE** (streams) and **TRANSPORTATION** (roads), not any length-based statistics.",Information on the **distribution of `average_geometry_length_km` for linear features** like rivers and roads is currently unavailable in this context file. The metrics dataset provides aggregated counts and coverage but does not include length statistics for individual feature types.,"**Information is currently unavailable.**
+
+The provided Metrics dataset **does not include `average_geometry_length_km`** or any length-based statistics for linear features such as rivers (in **Base**) or roads/segments (in **Transportation**). Only total counts, property coverage, and class/subtype counts are provided.
+
+Therefore, it is **not possible to determine the distribution of average geometry lengths** for rivers, roads, or other linear features using the available context."
+30,Identify any land categories added in the most recent release and their `id_count` totals.,"In the **BASE theme**, which includes land, land_use, and land_cover features, the **change type distribution** reports:
+
+* **added:** 214,546
+* **unchanged:** 385,917,731
+* **data_changed:** 861,546
+* **removed:** 191,953
+
+However, the **context file does not provide a breakdown of which specific land categories were added**, nor their individual `id_count` totals.
+
+Therefore, **information about specific land categories added and their `id_count` is currently unavailable**.",Information is currently unavailable — the context file does not provide per-category additions or `id_count` totals for land features in the latest release.,"For the **BASE** theme (land categories), the records marked as **added** in the most recent release total **214,546**.
+
+However, the dataset does **not provide a breakdown of `id_count` by specific land category** for added features, so the counts per individual land category are **currently unavailable**.","Information on **land categories added in the most recent release and their `id_count` totals** is currently unavailable in this context file. The dataset provides total counts and theme-level statistics, but does not include per-category additions by release.","For the **Base theme** (which includes land, land_use, land_cover, etc.), the **land categories added in the most recent release** have the following counts:
+
+* **Added records:** 214,546
+
+However, the dataset **does not break this down by specific land category or class**, so the **`id_count` totals per land category are not provided**.
+
+**Summary:**
+
+* **Theme:** Base (land-related features)
+* **Change type:** added
+* **Total `id_count`:** 214,546
+* **Breakdown by land category:** information is currently unavailable."
+33,How many building subtypes have non-zero `height_count` values?,"**Information is currently unavailable.**
+
+The **Buildings** theme provides:
+
+* **Total `height_count`:** 192,433,555 (7.35% of buildings)
+* **Top class and subtype values**
+* **Property coverage for other attributes**
+
+However, the dataset **does not break down `height_count` by building subtype**, so we cannot determine **how many subtypes have non-zero height values** from the available data.","Information is currently unavailable — the context file reports that **7.35% of buildings** have height information, but it does not break this down by building subtype.","The dataset shows that **192,433,555** buildings have `height` values, but it does **not provide a breakdown by subtype**. Therefore, the number of building subtypes with non-zero `height_count` is **currently unavailable**.","Information on the **number of building subtypes with non-zero `height_count` values** is currently unavailable in this context file. The metrics dataset provides that **7.35% of buildings include height information**, but it does not break this down by subtype.","**Information is currently unavailable.**
+
+The dataset provides the **overall `height_count` for buildings**:
+
+* **height_count:** 192,433,555 (7.35% of all buildings)
+
+and lists **top building subtypes** (e.g., residential, outbuilding, commercial, etc.), but it **does not indicate which specific subtypes have non-zero height values**.
+
+Therefore, it is **not possible to determine how many building subtypes have non-zero `height_count`** based on the available metrics."
+35,What fraction of building rows include `has_parts_count` > 0 (indicating building parts)?,"In the **Buildings** theme:
+
+* **Total building records:** 2,618,753,985
+* **Records with `has_parts_count`:** 2,615,590,994
+
+The fraction is:
+
+[
+\frac{2,615,590,994}{2,618,753,985} \approx 0.9988
+]
+
+So, approximately **99.88%** of building records have `has_parts_count` > 0, meaning they include building parts.","The context file reports that **99.88% of building records** include `has_parts_count` > 0, indicating they have building parts.","Out of the total **2,618,753,985** building records, **2,615,590,994** have `has_parts_count` recorded.
+
+To calculate the fraction:
+
+[
+\frac{2,615,590,994}{2,618,753,985} \approx 0.9988
+]
+
+So approximately **99.88%** of building records include `has_parts_count` > 0, indicating they have building parts.","**99.88%** of building records include `has_parts_count` > 0, indicating that they have building parts.","In the **Buildings theme**, the dataset provides:
+
+* **Total building records:** 2,618,753,985
+* **has_parts_count:** 2,615,590,994
+
+To calculate the fraction:
+
+[
+\text{Fraction} = \frac{\text{has_parts_count}}{\text{total records}} = \frac{2,615,590,994}{2,618,753,985}
+]
+
+Step-by-step calculation:
+
+1. Numerator: 2,615,590,994
+2. Denominator: 2,618,753,985
+3. Division: ( 2,615,590,994 ÷ 2,618,753,985 ≈ 0.9988 )
+
+### Answer:
+
+Approximately **99.88%** of building rows include `has_parts_count` > 0, indicating they have building parts."
+41,Which divisions experienced the most `change_type` = added or removed across releases?,"In the **Divisions** theme, the **change type distribution** is:
+
+* **unchanged:** 4,112,213
+* **data_changed:** 1,297,301
+* **added:** 37,512
+* **removed:** 9,944
+
+From this, we can see:
+
+* **Most divisions added:** 37,512
+* **Most divisions removed:** 9,944
+
+However, the **context file does not provide a breakdown by specific division names, regions, or sources**, so we **cannot identify which particular divisions experienced the most additions or removals**.
+
+✅ **Summary:**
+
+* **Added divisions:** 37,512
+* **Removed divisions:** 9,944
+* **Specific divisions affected:** information currently unavailable.",Information is currently unavailable — the context file does not provide `change_type` counts for divisions across releases.,"For the **DIVISIONS** theme:
+
+* **Added** records: 37,512
+* **Removed** records: 9,944
+
+This means divisions experienced relatively low changes compared with other themes, with **added changes being the most frequent**.
+
+No further breakdown by specific division names or regions is provided in the dataset.",Information on which **divisions experienced the most `change_type` = added or removed across releases** is currently unavailable in this context file. The metrics dataset tracks total counts and coverage but does not provide per-division change counts by release.,"From the **Divisions theme** in the dataset, the **change type counts** are:
+
+* **unchanged:** 4,112,213
+* **data_changed:** 1,297,301
+* **added:** 37,512
+* **removed:** 9,944
+
+This shows that the **most divisions experiencing changes across releases** are those with:
+
+* **Added:** 37,512
+* **Removed:** 9,944
+
+### Answer:
+
+* **Most divisions added:** 37,512
+* **Most divisions removed:** 9,944
+
+**Note:** The dataset does **not provide a breakdown by specific division names or IDs**, so it is **not possible to identify which exact divisions were added or removed**."
+43,Top 5 divisions by `total_geometry_area_km2`?,"**Information is currently unavailable.**
+
+The **Divisions** theme in the context file provides:
+
+* **Total record counts**
+* **Change type distribution**
+* **Top class and subtype values by count**
+* **Property coverage**
+
+However, it **does not include any statistics for `total_geometry_area_km2`**, so we cannot determine the **top 5 divisions by area** from the available dataset summary.",Information is currently unavailable — the context file does not include `total_geometry_area_km2` for divisions or any ranking by area.,"Information on `total_geometry_area_km2` for individual divisions is **currently unavailable** in the provided dataset. The context only provides total record counts and top class/subtype values, not geometry area measurements.","Information on the **top 5 divisions by `total_geometry_area_km2`** is currently unavailable in this context file. The dataset provides total counts and coverage for divisions, but does not include area measurements.","**Information is currently unavailable.**
+
+The provided Metrics dataset for the **Divisions theme** **does not include `total_geometry_area_km2`** or any area-based statistics. Only the following are available:
+
+* Total records (`id_count`)
+* Property coverage (e.g., `subtype_count`, `names_count`)
+* Class and subtype counts
+* Change type distribution
+
+Therefore, it is **not possible to determine the top 5 divisions by total geometry area** using the available context."
+47,Which place `primary_category` has the highest `id_count`?,"The context file for the **Places** theme provides **top category values** by record count, which corresponds to `id_count` totals. The top categories are:
+
+* **professional_services:** 1,927,856
+* shopping: 1,708,532
+* beauty_and_spa: 1,615,768
+* restaurant: 1,396,611
+* hotel: 686,364
+
+✅ Therefore, the **place `primary_category` with the highest `id_count`** is **`professional_services`**, with **1,927,856 records**.",Information is currently unavailable — the context file provides total records and key coverage for the **places** theme but does not report `id_count` by `primary_category`.,"The dataset does not provide `id_count` explicitly by `primary_category`, but the top **category values** for the **PLACES** theme are:
+
+* **professional_services**: 1,927,856
+* **shopping**: 1,708,532
+* **beauty_and_spa**: 1,615,768
+* **restaurant**: 1,396,611
+* **hotel**: 686,364
+
+Based on these counts, **professional_services** has the highest number of place records.","Information on the **place `primary_category` with the highest `id_count`** is currently unavailable in this context file. The metrics dataset provides top categories in the places theme as **professional_services, shopping, and beauty_and_spa**, but does not include counts per category.","In the **Places theme**, the dataset provides **top category values** with their counts. The **primary category with the highest `id_count`** is:
+
+* **professional_services** — **1,927,856** records
+
+This is the largest category by record count in the Places theme."
+Release 2025-09-24.0,,,,,,
+User Query #,User Queries,Standard,Concise (V1),Tree (V2),Table (V3),Min (V4)
+1,What is the total number of address records?,"The total number of address records is **446,544,475**.","The total number of address records is **446,544,475**.","The total number of address records in the Overture Maps Metrics dataset is **446,544,475**.","The total number of address records is **446,544,475**.","The total number of address records is **446,544,475**."
+3,"Which datasets or sources contribute the most address records, and what are their counts?","The top datasets contributing to address records and their counts are:
+
+* **br_ibge**: 89,899,299
+* **NAD**: 74,864,987
+* **OpenAddresses/AddressForAll/INEGI**: 28,407,305
+* **OpenAddresses/adresse.data.gouv.fr**: 26,068,954
+* **OpenAddresses/Istat e dall'Agenzia delle Entrate**: 25,949,445","The top sources contributing address records are:
+
+* **br_ibge**: 89,899,299 records
+* **NAD**: 74,864,987 records
+* **OpenAddresses / AddressForAll / INEGI**: 28,407,305 records","The top datasets contributing address records are:
+
+* **br_ibge**: 89,899,299
+* **NAD**: 74,864,987
+* **OpenAddresses/AddressForAll/INEGI**: 28,407,305
+* **OpenAddresses/adresse.data.gouv.fr**: 26,068,954
+* **OpenAddresses/Istat e dall'Agenzia delle Entrate**: 25,949,445",Information on the **top datasets or sources contributing to address records** is **currently unavailable** in the provided context. The Metrics dataset summary includes total counts and property coverage but does not list dataset-specific counts for addresses.,"The top datasets contributing address records and their counts are:
+
+* **br_ibge**: 89,899,299
+* **NAD**: 74,864,987
+* **OpenAddresses/AddressForAll/INEGI**: 28,407,305
+* **OpenAddresses/adresse.data.gouv.fr**: 26,068,954
+* **OpenAddresses/Istat e dall'Agenzia delle Entrate**: 25,949,445"
+4,What percentage of address records include postcode/ZIP values?,"Out of the total 446,544,475 address records, **326,466,164** include postcode/ZIP values.
+
+To calculate the percentage:
+
+[
+\frac{326,466,164}{446,544,475} \times 100
+]
+
+Step by step:
+
+1. Divide: ( 326,466,164 ÷ 446,544,475 ≈ 0.7311 )
+2. Convert to percentage: ( 0.7311 × 100 ≈ 73.11% )
+
+So, **73.11%** of address records include postcode/ZIP values.",Information on the percentage of address records that include postcode or ZIP values is **currently unavailable** in the provided dataset.,"Out of the total **446,544,475** address records, **326,466,164** include postcode/ZIP values.
+
+To calculate the percentage:
+
+[
+\text{Percentage} = \frac{326,466,164}{446,544,475} \times 100
+]
+
+Step-by-step:
+
+1. Divide: ( 326,466,164 ÷ 446,544,475 ≈ 0.7311 )
+2. Multiply by 100: ( 0.7311 × 100 ≈ 73.11% )
+
+✅ Therefore, **73.11%** of address records include postcode/ZIP values.","For the addresses theme, **73.11%** of records include postcode or ZIP information.","Out of the total **446,544,475** address records, **326,466,164** have postcode information.
+
+To calculate the percentage:
+
+[
+\text{Percentage} = \frac{326,466,164}{446,544,475} \times 100
+]
+
+Step-by-step:
+
+1. Divide: ( 326,466,164 ÷ 446,544,475 ≈ 0.7311 )
+2. Multiply by 100: ( 0.7311 × 100 ≈ 73.11% )
+
+**Answer:** Approximately **73.11%** of address records include postcode/ZIP values."
+6,What is the distribution (counts) of `address_level_1` (state/province) values?,"The top `address_level_1` values by record count are:
+
+* **SP**: 17,434,203
+* **CA**: 14,541,127
+* **FL**: 10,489,172
+* **MG**: 9,962,739
+* **TX**: 9,799,798
+
+Information for other `address_level_1` values is currently unavailable.","The distribution (counts) of `address_level_1` values is **currently unavailable** in the provided dataset. The context only reports that `address_levels_count` coverage is 100.00%, but does not provide specific counts per `address_level_1`.","The top `address_level_1` values (state/province) and their counts are:
+
+* **SP**: 17,434,203
+* **CA**: 14,541,127
+* **FL**: 10,489,172
+* **MG**: 9,962,739
+* **TX**: 9,799,798
+
+Information for other `address_level_1` values is currently unavailable.","Information on the **distribution or counts of specific `address_level_1` values** is **currently unavailable** in the provided context. The dataset only provides coverage metrics, showing that `address_levels_count` is 100%, but it does not list counts per state or province.","The top `address_level_1` values and their counts are:
+
+* **SP**: 17,434,203
+* **CA**: 14,541,127
+* **FL**: 10,489,172
+* **MG**: 9,962,739
+* **TX**: 9,799,798
+
+Information for other `address_level_1` values is currently unavailable."
+10,Are there sources where `address_level_2` or `address_level_3` are missing for more than 50% of rows?,"Information on missing `address_level_2` or `address_level_3` for specific sources is **currently unavailable** in this dataset. The context file only provides top `address_level_2` values and overall coverage metrics, but does not break down missing data by source.",Information about sources where `address_level_2` or `address_level_3` are missing for more than 50% of rows is **currently unavailable** in the provided dataset. The context file only provides overall coverage statistics for address levels (100.00%) but does not break it down by source.,"Information about sources with `address_level_2` or `address_level_3` missing for more than 50% of rows is **currently unavailable** in the provided dataset. The context file only gives top `address_level_1` and `address_level_2` counts, not missing-value percentages by source.","Information on sources with missing `address_level_2` or `address_level_3` values is **currently unavailable** in the provided context. The Metrics dataset only provides overall coverage percentages for address levels, not source-level completeness.","Information is currently unavailable.
+
+The provided **Metrics dataset summary** does not include statistics about:
+
+* Missing values for **`address_level_2`**
+* Missing values for **`address_level_3`**
+* Coverage or null rates **by source**
+
+The only address-related property coverage available is:
+
+* `country_count`: **446,544,475 (100.00%)**
+* `address_levels_count`: **446,544,475 (100.00%)**
+* `number_count`: **443,499,611 (99.32%)**
+* `street_count`: **439,273,593 (98.37%)**
+* `postcode_count`: **326,466,164 (73.11%)**
+
+Because the dataset summary does **not provide statistics for `address_level_2`, `address_level_3`, or missing-value rates by source**, it is not possible to determine whether any sources have more than **50% missing values** for those fields.
+"
+12,"Are there spatial outliers (e.g., addresses with `total_geometry_area_km2` or `average_geometry_area_km2` far above the 99th percentile)?","Information on spatial outliers, including addresses with `total_geometry_area_km2` or `average_geometry_area_km2` above the 99th percentile, is **currently unavailable** in this dataset. The context file does not include area-based statistics or outlier detection metrics.","Information on spatial outliers, including addresses with `total_geometry_area_km2` or `average_geometry_area_km2` above the 99th percentile, is **currently unavailable** in the provided dataset. The metrics summary does not include per-feature geometry area statistics or outlier analysis.","Information about spatial outliers, including addresses with `total_geometry_area_km2` or `average_geometry_area_km2` above the 99th percentile, is **currently unavailable** in the provided dataset. The metrics summary does not include area-based percentile statistics or outlier detection.","Information on **spatial outliers**, such as addresses with `total_geometry_area_km2` or `average_geometry_area_km2` exceeding the 99th percentile, is **currently unavailable** in the provided context. The Metrics dataset only provides aggregated counts and coverage, without detailed area statistics or outlier detection.","Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include statistics** for:
+
+* `total_geometry_area_km2`
+* `average_geometry_area_km2`
+* percentile distributions (e.g., **99th percentile**) of geometry area values
+
+The summary only provides high-level metrics such as:
+
+* **Total address records:** 446,544,475
+* Property coverage for fields like:
+
+  * `number_count`: **443,499,611 (99.32%)**
+  * `street_count`: **439,273,593 (98.37%)**
+  * `postcode_count`: **326,466,164 (73.11%)**
+
+Because **geometry area metrics and percentile distributions are not present**, it is not possible to identify **spatial outliers** or determine whether any addresses have geometry areas **above the 99th percentile** based on the provided dataset summary."
+13,Which sources or versions show the highest counts of `change_type` marked as 'removed' or 'modified'?,"Information on which sources or versions have the highest counts of `change_type` marked as **'removed'** or **'modified'** is **currently unavailable**. The context file only provides change type distributions at the theme level, and `removed` rows are not included in most statistics except where explicitly noted.","Information on which sources or versions have the highest counts of `change_type` marked as **removed** or **modified** is **currently unavailable** in the provided dataset. The context file notes that change type distribution exists, but specific counts by source or version are not included.","Information on sources or versions with the highest counts of `change_type` marked as **'removed'** or **'modified'** is **currently unavailable** in the provided dataset.
+
+The context file only reports `change_type` distributions aggregated by theme, and for addresses, all rows are `unchanged`. For other themes, only counts for `unchanged`, `added`, and `data_changed` are given; no theme reports `removed` separately by source or version.","Information on **sources or versions with the highest counts of `change_type` marked as 'removed' or 'modified'** is **currently unavailable** in the provided context. The dataset summary mentions that change type distribution exists, but no detailed counts per source or version are provided.","Information is currently unavailable.
+
+The provided **Metrics dataset summary** includes **change type distributions only at the theme level**, not broken down by **source** or **version**. Therefore, it is not possible to determine which **sources** or **versions** have the highest counts of records marked as **`removed`** or **`modified`**.
+
+The available change type statistics are:
+
+**Transportation**
+
+* unchanged: **702,822,070**
+* data_changed: **6,147,186**
+* added: **5,057,790**
+
+**Buildings**
+
+* unchanged: **2,530,652,157**
+* added: **4,522,901**
+* data_changed: **3,099,678**
+
+**Divisions**
+
+* unchanged: **5,360,188**
+* data_changed: **172,155**
+* added: **56,690**
+
+**Places**
+
+* data_changed: **61,747,959**
+* added: **9,876,570**
+
+**Base**
+
+* unchanged: **438,245,144**
+* added: **3,190,170**
+* data_changed: **2,182,121**
+
+**Addresses**
+
+* unchanged: **446,544,475**
+
+Additionally, the summary does **not list counts for `removed` records** in any theme, and it does **not provide change type distributions by source or version**. Therefore, identifying the sources or versions with the highest counts of **`removed`** or **`modified` (`data_changed`)** records is not possible with the provided data."
+16,Which source has the highest `geometry_count` summed across all address classes?,Information on `geometry_count` summed by source for address records is **currently unavailable** in this dataset. The context file lists total address records and top datasets but does not provide geometry counts broken down by source.,"The dataset lists top sources for addresses but does not provide `geometry_count` summed by source. Therefore, information on which source has the highest `geometry_count` across all address classes is **currently unavailable**.","Information on `geometry_count` summed by source for addresses is **currently unavailable** in the provided dataset. The context file only lists total address records and top datasets by total record count, not geometry-specific sums per source.",Information on the **source with the highest `geometry_count` across all address classes** is **currently unavailable** in the provided context. The dataset provides total geometry counts and coverage percentages but does not break them down by individual sources.,"Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include `geometry_count` statistics broken down by source** within the **addresses** theme, nor does it provide `geometry_count` grouped by **address classes**.
+
+The only source-level information available for addresses is the **Top Datasets by record count**:
+
+* **br_ibge:** 89,899,299
+* **NAD:** 74,864,987
+* **OpenAddresses/AddressForAll/INEGI:** 28,407,305
+* **OpenAddresses/adresse.data.gouv.fr:** 26,068,954
+* **OpenAddresses/Istat e dall'Agenzia delle Entrate:** 25,949,445
+
+However, the dataset summary **does not provide `geometry_count` values for these sources**, nor does it provide a breakdown **across address classes**. Therefore, it is not possible to determine **which source has the highest `geometry_count` summed across all address classes** using the available information."
+18,Which `postal_city` values show an increase in address counts between consecutive releases?,Information on changes in address counts by `postal_city` between consecutive releases is **currently unavailable** in this dataset. The context file provides change type distributions at the theme level but does not track individual cities over time.,Information on `postal_city` values showing an increase in address counts between consecutive releases is **currently unavailable** in the provided dataset. The metrics summary does not include temporal or release-by-release comparisons at the city level.,Information on `postal_city` values showing an increase in address counts between consecutive releases is **currently unavailable** in the provided dataset. The context file does not include time-based or versioned delta statistics at the city level.,Information on **`postal_city` values with increased address counts between consecutive releases** is **currently unavailable** in the provided context. The Metrics dataset includes aggregated totals and coverage but does not track per-city changes across releases.,"Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include**:
+
+* A **`postal_city` attribute**
+* **Address counts grouped by `postal_city`**
+* **Release-to-release comparisons** of address counts
+* **Time-series metrics across dataset versions**
+
+The only address-level statistics available are:
+
+* **Total address records:** **446,544,475**
+
+* **Top Address Level 1 values:**
+
+  * SP: **17,434,203**
+  * CA: **14,541,127**
+  * FL: **10,489,172**
+  * MG: **9,962,739**
+  * TX: **9,799,798**
+
+* **Top Address Level 2 values:**
+
+  * São Paulo: **3,503,297**
+  * UNINCORPORATED: **2,004,358**
+  * Rio de Janeiro: **1,798,005**
+  * Roma: **1,076,356**
+  * Bogotá Distrito Capital: **1,075,087**
+
+Because the dataset summary does **not include `postal_city` statistics or historical release comparisons**, it is not possible to determine **which `postal_city` values show increases in address counts between consecutive releases**."
+20,Top 5 `address_level_2` regions by total `id_count`?,"The top 5 `address_level_2` regions by total `id_count` in the Addresses theme are:
+
+1. **São Paulo** – 3,503,297
+2. **UNINCORPORATED** – 2,004,358
+3. **Rio de Janeiro** – 1,798,005
+4. **Roma** – 1,076,356
+5. **Bogotá Distrito Capital** – 1,075,087
+
+These values come directly from the Addresses theme statistics in the Overture Maps Metrics dataset.",Information on the top `address_level_2` regions by total `id_count` is **currently unavailable** in the provided dataset. The context file does not include aggregated counts at the level of `address_level_2`.,"The top 5 `address_level_2` regions by total `id_count` are:
+
+* **São Paulo**: 3,503,297
+* **UNINCORPORATED**: 2,004,358
+* **Rio de Janeiro**: 1,798,005
+* **Roma**: 1,076,356
+* **Bogotá Distrito Capital**: 1,075,087",Information on the **top `address_level_2` regions by total `id_count`** is **currently unavailable** in the provided context. The dataset summary provides overall counts and coverage but does not list counts broken down by `address_level_2`.,"The **top 5 `address_level_2` regions by total `id_count`** (based on the available aggregated counts) are:
+
+1. **São Paulo** — **3,503,297**
+2. **UNINCORPORATED** — **2,004,358**
+3. **Rio de Janeiro** — **1,798,005**
+4. **Roma** — **1,076,356**
+5. **Bogotá Distrito Capital** — **1,075,087**
+
+These values come from the **Top Address Level 2 Values** in the **addresses theme**, which has a **total of 446,544,475 address records**.
+"
+23,Which land cover categories have the largest `total_geometry_area_km2` in the latest release?,"Information on `total_geometry_area_km2` by land cover category is **currently unavailable** in the provided Overture Maps Metrics context file. The Base theme does include land cover records and class/subtype counts, but no area metrics are listed.","Information on land cover categories and their `total_geometry_area_km2` is **currently unavailable** in the provided dataset. The metrics summary for the **base** theme only provides total record counts and property coverage, not area by category.","Information on land cover categories ranked by `total_geometry_area_km2` is **currently unavailable** in the provided dataset. The BASE theme only provides counts for class and subtype values (e.g., tree, stream, forest) but does not include area-based statistics.",Information on **land cover categories and their `total_geometry_area_km2`** is **currently unavailable** in the provided context. The Metrics dataset provides counts and property coverage but does not include area-based statistics by category.,"Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include** statistics for:
+
+* `total_geometry_area_km2`
+* geometry area totals by **land cover category**
+* geometry area metrics for the **latest release**
+
+The **Base theme** (which includes land cover data) only provides:
+
+* **Total records:** **443,617,435**
+* **Property coverage:**
+
+  * `subtype_count`: **443,557,472 (99.99%)**
+  * `class_count`: **320,255,358 (72.19%)**
+  * `source_tags_count`: **319,356,165 (71.99%)**
+  * `cartography_count`: **123,362,077 (27.81%)**
+  * `names_count`: **23,484,985 (5.29%)**
+
+It also lists **top class values** by record count (not area):
+
+* tree: **30,190,978**
+* stream: **27,493,007**
+* power_tower: **17,531,468**
+* power_pole: **17,355,082**
+* water: **16,338,662**
+
+Because **geometry area metrics (`total_geometry_area_km2`) are not included**, it is not possible to determine **which land cover categories have the largest total geometry area in the latest release**."
+26,Which `change_type` is most common for land use features?,"In the **Base** theme, which includes land use features, the most common `change_type` is **unchanged**, with **438,245,144** records.",Information on the most common `change_type` for land use features is **currently unavailable** in the provided dataset. The context file does not break down change types by feature subtype within the **base** theme.,"For land use features (part of the **BASE** theme), the most common `change_type` is **unchanged**, with **438,245,144** records.
+
+Other counts for BASE are:
+
+* **added**: 3,190,170
+* **data_changed**: 2,182,121","Information on the **most common `change_type` for land use features** is **currently unavailable** in the provided context. The dataset summary includes change type distribution in general, but it does not provide breakdowns specifically for land use features.","Information is currently unavailable.
+
+The provided **Metrics dataset summary** does not include **change type statistics specifically for land use features**. The **Base theme** includes multiple feature types:
+
+* bathymetry
+* land_cover
+* **land_use**
+* land
+* water
+* infrastructure
+
+However, the **Change Type Distribution** is only provided **for the entire Base theme**, not broken down by individual feature types such as **land_use**.
+
+Available **Base theme change type counts**:
+
+* **unchanged:** **438,245,144**
+* **added:** **3,190,170**
+* **data_changed:** **2,182,121**
+
+Because the dataset does **not provide change type counts specifically for `land_use` features**, it is not possible to determine which **`change_type` is most common for land use features**."
+28,What is the distribution of `average_geometry_length_km` for linear features such as rivers and roads?,"Information on `average_geometry_length_km` for linear features (rivers, roads, etc.) is **currently unavailable** in the Overture Maps Metrics context file. The dataset provides counts, class/subtype statistics, and property coverage, but does not include geometry length metrics.",Information on the distribution of `average_geometry_length_km` for linear features like rivers and roads is **currently unavailable** in the provided dataset. The metrics summary does not include per-feature geometry lengths or statistical distributions for linear features.,"Information on the distribution of `average_geometry_length_km` for linear features (e.g., rivers, roads) is **currently unavailable** in the provided dataset. The context file does not include length-based statistics for geometries.","Information on the **distribution of `average_geometry_length_km` for linear features** like rivers and roads is **currently unavailable** in the provided context. The Metrics dataset only provides counts and coverage, without detailed geometry length statistics.","Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include statistics** for:
+
+* `average_geometry_length_km`
+* distributions (e.g., min, max, percentiles) of geometry length
+* geometry length metrics for **linear features** such as rivers or roads
+
+The relevant themes that contain such features are:
+
+* **Transportation** (e.g., road segments, connectors) with **714,027,046 total records**
+* **Base** (which includes water features such as streams) with **443,617,435 total records**
+
+However, the summary only provides counts such as:
+
+**Transportation – Top Class Values**
+
+* residential: **125,885,875**
+* service: **57,943,364**
+* unclassified: **29,648,979**
+* track: **25,289,639**
+* footway: **21,840,546**
+
+**Base – Top Class Values**
+
+* tree: **30,190,978**
+* stream: **27,493,007**
+* power_tower: **17,531,468**
+* power_pole: **17,355,082**
+* water: **16,338,662**
+
+Because the dataset summary does **not include `average_geometry_length_km` or any geometry length distributions**, it is not possible to determine the **distribution of average geometry lengths for rivers, roads, or other linear features**."
+30,Identify any land categories added in the most recent release and their `id_count` totals.,"In the **Base** theme, which includes land categories, the **added** `change_type` records total **3,190,170**.
+
+However, the dataset does **not break down `id_count` by individual land categories**, so specific `id_count` per land category is **currently unavailable**.","Information on land categories added in the most recent release, along with their `id_count` totals, is **currently unavailable** in the provided dataset. The context file does not include release-by-release additions or per-category counts for the **base** theme.","For the **BASE** theme (which includes land categories), the `change_type` distribution shows that **added** records total **3,190,170**.
+
+However, information linking specific **land categories** to their `id_count` within the added records is **currently unavailable** in the provided dataset.",Information on **land categories added in the most recent release and their `id_count` totals** is **currently unavailable** in the provided context. The Metrics dataset does not provide per-category additions or counts by release.,"Information is currently unavailable.
+
+The provided **Metrics dataset summary** does **not include statistics** that identify:
+
+* **Specific land categories added in the most recent release**
+* **`id_count` totals for features with `change_type = added` by category or class**
+
+For the **Base theme** (which includes land-related categories such as **land**, **land_cover**, and **land_use**), the only available **Change Type Distribution** is aggregated:
+
+* **unchanged:** **438,245,144**
+* **added:** **3,190,170**
+* **data_changed:** **2,182,121**
+
+Additionally, the dataset provides **top class values by record count** (not by change type):
+
+* tree: **30,190,978**
+* stream: **27,493,007**
+* power_tower: **17,531,468**
+* power_pole: **17,355,082**
+* water: **16,338,662**
+
+Because the summary **does not break down `added` records by land category or provide `id_count` totals for newly added classes**, it is not possible to identify **which land categories were added in the most recent release or their corresponding `id_count` totals**."
+33,How many building subtypes have non-zero `height_count` values?,"The Overture Maps Metrics context file provides that **height data is available for 201,924,360 buildings** (7.96% of total buildings), but it does **not break down `height_count` by individual building subtypes**.
+
+Therefore, the number of building subtypes with non-zero `height_count` is **currently unavailable**.","Information on the number of building subtypes with non-zero `height_count` values is **currently unavailable** in the provided dataset. The context file only reports that overall **7.96% of buildings** include height information, without breaking it down by subtype.","Information on the number of **building subtypes** with non-zero `height_count` values is **currently unavailable** in the provided dataset. The context file only reports that **201,924,360** buildings (7.96% of the total) have height data, but it does not break this down by subtype.","Information on the **number of building subtypes with non-zero `height_count` values** is **currently unavailable** in the provided context. The dataset only provides the overall buildings theme coverage for height, which is **7.96%** of all buildings.","Information is currently unavailable.
+
+The **Metrics dataset summary** for buildings provides:
+
+* **Total building records:** 2,538,274,736
+* **Property coverage:**
+
+  * `height_count`: 201,924,360 (**7.96% of buildings**)
+  * `subtype_count`: 136,745,555 (**5.39% of buildings**)
+
+However, the summary **does not provide a breakdown of `height_count` by building subtype**, so it is **not possible to determine how many building subtypes have non-zero `height_count` values** using the available data."
+35,What fraction of building rows include `has_parts_count` > 0 (indicating building parts)?,"In the **Buildings** theme:
+
+* Total building records: 2,538,274,736
+* Records with `has_parts_count`: 2,534,851,890
+
+To calculate the fraction:
+
+[
+\text{Fraction} = \frac{2,534,851,890}{2,538,274,736}
+]
+
+Step-by-step:
+
+1. Subtract numerator from denominator: 2,538,274,736 − 2,534,851,890 = 3,422,846 missing.
+2. Divide: 2,534,851,890 ÷ 2,538,274,736 ≈ 0.99865
+
+So roughly **99.87%** of building rows include `has_parts_count` > 0.","According to the dataset, **99.87% of buildings** include `has_parts_count` > 0, indicating they have building parts.","Out of the total **2,538,274,736** building records, **2,534,851,890** have `has_parts_count` > 0.
+
+To calculate the fraction:
+
+[
+\text{Fraction} = \frac{2,534,851,890}{2,538,274,736}
+]
+
+Step-by-step:
+
+1. Divide: ( 2,534,851,890 ÷ 2,538,274,736 ≈ 0.9986 )
+
+✅ Therefore, approximately **99.87%** of building records include building parts.","For the buildings theme, **99.87%** of rows include `has_parts_count` greater than 0, indicating that these buildings have parts.","From the **Buildings theme** in the provided metrics:
+
+* **Total building records:** 2,538,274,736
+* **`has_parts_count`:** 2,534,851,890
+
+To calculate the fraction of buildings that include parts:
+
+[
+\text{Fraction} = \frac{\text{has_parts_count}}{\text{total records}} = \frac{2,534,851,890}{2,538,274,736}
+]
+
+Step-by-step:
+
+1. **Numerator:** 2,534,851,890
+2. **Denominator:** 2,538,274,736
+3. **Division:** ( 2,534,851,890 \div 2,538,274,736 \approx 0.9987 )
+
+**Answer:** Approximately **99.87%** of building records include parts (`has_parts_count > 0`)."
+41,Which divisions experienced the most `change_type` = added or removed across releases?,"In the **Divisions** theme, the `change_type` distribution is:
+
+* **unchanged:** 5,360,188
+* **data_changed:** 172,155
+* **added:** 56,690
+
+There is **no `removed` count provided**, so any removed divisions are **not included** in the context file.
+
+Therefore, the divisions that experienced the most `change_type` = **added** are **all 56,690 added records**, and information about removed divisions is **currently unavailable**.",Information on which divisions experienced the most `change_type` = **added** or **removed** across releases is **currently unavailable** in the provided dataset. The metrics summary does not provide change type counts broken down by division or over multiple releases.,"For the **DIVISIONS** theme, the `change_type` counts are:
+
+* **added**: 56,690
+* **data_changed**: 172,155
+* **unchanged**: 5,360,188
+
+Information on divisions with `change_type = removed` is **currently unavailable**.
+
+✅ Therefore, divisions with the most change are those marked **data_changed** (172,155) and **added** (56,690).",Information on **which divisions experienced the most `change_type` marked as added or removed** is **currently unavailable** in the provided context. The Metrics dataset summary does not provide per-division change counts across releases.,"Information is currently unavailable.
+
+The **Metrics dataset summary** for the **Divisions theme** only provides **overall change type counts**, not broken down by individual divisions:
+
+* **unchanged:** 5,360,188
+* **data_changed:** 172,155
+* **added:** 56,690
+
+Additionally, the summary **does not include any counts for `removed` records**, and there is **no per-division breakdown** of change types.
+
+Therefore, it is **not possible to identify which specific divisions experienced the most `added` or `removed` changes** using the provided dataset."
+43,Top 5 divisions by `total_geometry_area_km2`?,"Information on `total_geometry_area_km2` for divisions is **currently unavailable** in the Overture Maps Metrics context file. The Divisions theme provides counts, class/subtype distributions, and property coverage, but does not include area metrics.","Information on the top divisions by `total_geometry_area_km2` is **currently unavailable** in the provided dataset. The metrics summary for the **divisions** theme only provides total record counts and coverage, not area measurements.",Information on divisions ranked by `total_geometry_area_km2` is **currently unavailable** in the provided dataset. The context file does not include area-based metrics for divisions.,Information on the **top 5 divisions by `total_geometry_area_km2`** is **currently unavailable** in the provided context. The Metrics dataset provides counts and coverage but does not include geometry area statistics by division.,"Information is currently unavailable.
+
+The provided **Metrics dataset summary** for the **Divisions theme** does **not include `total_geometry_area_km2` values**. The only available statistics are:
+
+* **Total records:** 5,589,033
+
+* **Property coverage:**
+
+  * `subtype_count`: 5,589,033 (100.00%)
+  * `country_count`: 5,588,471 (99.99%)
+  * `region_count`: 5,513,471 (98.65%)
+  * `names_count`: 5,501,387 (98.43%)
+  * `local_type_count`: 4,453,656 (79.69%)
+
+* **Top Class Values (by record count):**
+
+  * hamlet: 1,631,882
+  * village: 1,481,131
+  * land: 1,129,313
+  * town: 102,842
+  * city: 13,877
+
+Because the dataset **does not provide geometry area metrics**, it is **not possible to determine the top 5 divisions by `total_geometry_area_km2`**."
+47,Which place `primary_category` has the highest `id_count`?,"In the **Places** theme, the top `primary_category` by `id_count` is **restaurant**, with **1,785,337** records.","Information on which place `primary_category` has the highest `id_count` is **currently unavailable** in the provided dataset. The context file reports overall **71,624,529 place records** with full coverage for names, categories, and confidence, but does not break down counts by category.","The **places** theme does not explicitly list `primary_category` by `id_count`, but the top categories by record count are:
+
+* **restaurant**: 1,785,337
+* **professional_services**: 1,560,893
+* **hotel**: 1,557,396
+* **beauty_salon**: 1,443,938
+* **shopping**: 1,097,386
+
+✅ Therefore, the **restaurant** category has the highest `id_count` among places.","Information on which **place `primary_category` has the highest `id_count`** is **currently unavailable** in the provided context. The dataset lists top categories generally (restaurant, professional_services, hotel) but does not provide exact counts per category.","From the **Places theme** in the provided metrics, the **top categories by record count** are:
+
+* **restaurant:** 1,785,337
+* professional_services: 1,560,893
+* hotel: 1,557,396
+* beauty_salon: 1,443,938
+* shopping: 1,097,386
+
+Since `primary_category` corresponds to the main category of a place, the category with the **highest `id_count`** is:
+
+**Answer:** **restaurant** with **1,785,337** records."
+Release 2025-05-21.0,,,,,,
+User Query #,User Queries,Standard,Concise (V1),Tree (V2),Table (V3),Min (V4)
+1,What is the total number of address records?,,,,,
+3,"Which datasets or sources contribute the most address records, and what are their counts?",,,,,
+4,What percentage of address records include postcode/ZIP values?,,,,,
+6,What is the distribution (counts) of `address_level_1` (state/province) values?,,,,,
+10,Are there sources where `address_level_2` or `address_level_3` are missing for more than 50% of rows?,,,,,
+12,"Are there spatial outliers (e.g., addresses with `total_geometry_area_km2` or `average_geometry_area_km2` far above the 99th percentile)?",,,,,
+13,Which sources or versions show the highest counts of `change_type` marked as 'removed' or 'modified'?,,,,,
+16,Which source has the highest `geometry_count` summed across all address classes?,,,,,
+18,Which `postal_city` values show an increase in address counts between consecutive releases?,,,,,
+20,Top 5 `address_level_2` regions by total `id_count`?,,,,,
+23,Which land cover categories have the largest `total_geometry_area_km2` in the latest release?,,,,,
+26,Which `change_type` is most common for land use features?,,,,,
+28,What is the distribution of `average_geometry_length_km` for linear features such as rivers and roads?,,,,,
+30,Identify any land categories added in the most recent release and their `id_count` totals.,,,,,
+33,How many building subtypes have non-zero `height_count` values?,,,,,
+35,What fraction of building rows include `has_parts_count` > 0 (indicating building parts)?,,,,,
+41,Which divisions experienced the most `change_type` = added or removed across releases?,,,,,
+43,Top 5 divisions by `total_geometry_area_km2`?,,,,,
+47,Which place `primary_category` has the highest `id_count`?,,,,,
